@@ -1,6 +1,7 @@
 //-------------TOTO JE KOD ROBENY POMOCOU JQUERY-----------
 //tu si do premennej nt dame link ktory je akurat aktivny
 var nt = document.querySelectorAll("a.active");
+var nt2 = document.querySelectorAll("a.act");
 
 //funkcia na odobratie triedy active ked namierime na iny link
 //to sa robi pretoze ak namierime na iny link v menu tak nam 
@@ -19,5 +20,23 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$('ul li a').mouseout(function(){
 		$(nt).addClass("active");
+	});
+});
+
+$(document).ready(function(){
+	$('.vysuvacieMenu').click(function(){
+		$('.divko ul').toggleClass('activeMenu');
+	});
+});
+
+$(document).ready(function(){
+	$('ul li a').mousemove(function(){
+		$('li a').removeClass("act");
+	});
+});
+
+$(document).ready(function(){
+	$('ul li a').mouseout(function(){
+		$(nt2).addClass("act");
 	});
 });

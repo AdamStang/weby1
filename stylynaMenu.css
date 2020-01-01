@@ -2,6 +2,10 @@ nav{
 	width: 100%;
 	background-color: #6699ff;
 }
+
+.menu{
+	position: relative;
+}
 			
 .menu ul{
 	padding: 0;
@@ -109,6 +113,170 @@ nav{
 	border-right: 4px solid #cc0000;
 	border-left: 4px solid #cc0000;
 	transition: 0.5s;
+}
+
+.divko{
+	display: none;
+	position: absolute;
+}
+
+.MaleMenu{
+	background-color: #6699ff;
+	width: 100%;
+	color: white;
+	font-size: 30px;
+	display: none;
+	position: relative;
+	height: 50px;
+	align-items: center;
+	position: relative;
+}
+.logo{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 3%;
+	transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px){
+	.MaleMenu{
+		display: flex;
+		
+	}
+	.divko{
+		display: block;
+		background-color: #6699ff;
+		width: 97.5%;
+		opacity: 0.7;
+	}
+	ul{
+		background-color: #6699ff;
+		display: none;
+		height: 100%;
+		padding: 0;
+	}
+	ul li{
+		text-align: center;
+		line-height: 30px;
+	}
+	ul li a{
+		text-decoration: none;
+		color: white;
+		font-size: 20px;
+		position: relative;
+		display: block;
+		padding: 10px 0px;
+		width: 150px;
+		margin: 0 auto;
+	}
+	ul li a:hover{
+		color: white;
+		font-size: 22px;
+		transition: 1.0s;
+	}
+	ul li a:after{
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 4px;
+		background: #cc0000;
+		bottom: 0;
+		right: 0;
+		transition: 0.5s;
+	}
+	ul li a:hover:after{
+		width: 100%;
+	}
+	.activeMenu{
+		display: block;
+	}
+	.logo{
+		display: none;
+	}
+	.logo2{
+		display: inline-block;
+		margin: 0 20px;
+	}
+}
+
+.act{
+	color: #cc0000;
+}
+
+.act:after{
+	width: 100%;
+}
+
+.kal{
+	border: 5px solid #6699ff;
+	display: block;
+	width: 40%;
+	height: 250px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#name{
+	position: absolute;
+	display: block;
+	bottom: 50px;
+	left: 20px;
+	border: 2px solid #cc0000;
+	padding: 25px 10px;
+	width: 230px;
+}
+
+#date{
+	position: absolute;
+	display: block;
+	bottom: 50px;
+	right: 20px;
+	border: 2px solid #cc0000;
+	padding: 25px 10px;
+	width: 230px;
+}
+
+#b1{
+	position: absolute;
+	display: block;
+	top: 20px;
+	left: 20px;
+	border: 2px solid #cc0000;
+	padding: 25px 10px;
+	text-transform: uppercase;
+	width: 230px;
+}
+
+#b2{
+	position: absolute;
+	display: block;
+	top: 20px;
+	right: 20px;
+	border: 2px solid #cc0000;
+	padding: 25px 10px;
+	text-transform: uppercase;
+	width: 230px;
+}
+
+#b1:hover, #b2:hover, #name:hover, #date:hover{
+	border: 5px solid #cc0000;
+	transition: 0.2s;	
+	background-color: #6699ff;
+	color: #cc0000;
+	font-weight: bold;
+}
+
+#demo{
+	position: absolute;
+	display: block;
+	bottom: 10px;
+	left: 20px;
+	color: #cc0000;
+	font-size: 16;
+	font-weight: bold;
 }
 
 /*Netreba komentar*/
