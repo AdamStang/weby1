@@ -1,0 +1,22 @@
+<!--SVG JE NASTAVENE NA DANU VELKOST -->
+<svg width="400" height="300" id="krizovatka7" class="krizovatka7" xmlns="http://www.w3.org/2000/svg" >
+	
+	<!--Zeleny stvorec -->
+	<rect x="0" y="0" height="300" width="400" fill="lightgreen"/>
+	
+	<!--Cesta -->
+	<polygon fill="gray" points="0,100 150,100 150,0 250,0 250,100 400,100 400,200 250,200 250,300 150,300 150,200 0,200 0,50"/>
+	
+	<!--Biele ciary na ceste -->
+	<line x1="10" y1="150" x2="40" y2="150" stroke="white"/>
+	<line x1="65" y1="150" x2="95" y2="150" stroke="white"/>
+	<line x1="120" y1="150" x2="150" y2="150" stroke="white"/>
+	<line x1="250" y1="150" x2="280" y2="150" stroke="white"/>
+	<line x1="305" y1="150" x2="335" y2="150" stroke="white"/>
+	<line x1="360" y1="150" x2="390" y2="150" stroke="white"/>
+	<line x1="200" y1="200" x2="200" y2="230" stroke="white"/>
+	<line x1="200" y1="255" x2="200" y2="285" stroke="white"/>
+	<line x1="200" y1="100" x2="200" y2="70" stroke="white"/>
+	<line x1="200" y1="45" x2="200" y2="15" stroke="white"/>
+	
+</svg>

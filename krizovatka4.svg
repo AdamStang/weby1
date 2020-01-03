@@ -1,0 +1,27 @@
+<svg width="400" height="300" id="krizovatka4" class="krizovatka4" xmlns="http://www.w3.org/2000/svg" >
+	<rect x="0" y="0" height="300" width="400" fill="lightgreen"/>
+	<polygon fill="gray" points="0,100 200,100 200,0 300,0 300,300 200,300 200,200 0,200 0,100"/>
+	
+	<line x1="10" y1="150" x2="40" y2="150" stroke="white"/>
+	<line x1="65" y1="150" x2="95" y2="150" stroke="white"/>
+	<line x1="120" y1="150" x2="150" y2="150" stroke="white"/>
+	
+	<line x1="250" y1="0" x2="250" y2="25" stroke="white"/>
+	<line x1="250" y1="50" x2="250" y2="80" stroke="white"/>
+	<line x1="250" y1="105" x2="250" y2="135" stroke="white"/>
+	<line x1="250" y1="160" x2="250" y2="190" stroke="white"/>
+	<line x1="250" y1="215" x2="250" y2="245" stroke="white"/>
+	<line x1="250" y1="270" x2="250" y2="300" stroke="white"/>
+	
+	<line x1="160" y1="110" x2="190" y2="110" stroke="white" stroke-width="6"/>
+	<line x1="160" y1="125" x2="190" y2="125" stroke="white" stroke-width="6"/>
+	<line x1="160" y1="140" x2="190" y2="140" stroke="white" stroke-width="6"/>
+	<line x1="160" y1="155" x2="190" y2="155" stroke="white" stroke-width="6"/>
+	<line x1="160" y1="170" x2="190" y2="170" stroke="white" stroke-width="6"/>
+	<line x1="160" y1="185" x2="190" y2="185" stroke="white" stroke-width="6"/>
+	
+	<polygon fill="white" points="190,200 200,210 200,230 190,240 170,240 160,230 160,210 170,200 190,200"/>
+	<polygon fill="red" points="185,205 195,215 195,225 185,235 175,235 165,225 165,215 175,205 185,205"/>
+	<line x1="130" y1="220" x2="160" y2="220" stroke="black"/>
+	<text x="200" y="200" fill="white" transform="rotate(90 185,191)" style="font-size: 11px">STOP</text>
+</svg>
