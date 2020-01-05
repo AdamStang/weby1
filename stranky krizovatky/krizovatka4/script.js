@@ -8,12 +8,16 @@ function animauto1(x) {
 function animauto2(x) {
     x.classList.add("pohybauto2");
 	x.classList.remove("stopauto2");
+	var auto2 = document.getElementById("auto3").classList.add("pohybauto3");
+	var auto2 = document.getElementById("auto3").classList.remove("stopauto3");
 	
 }
 
 function animauto3(x) {
     x.classList.add("pohybauto3");
 	x.classList.remove("stopauto3");
+	var auto2 = document.getElementById("auto2").classList.add("pohybauto2");
+	var auto2 = document.getElementById("auto2").classList.remove("stopauto2");
 	
 }
 
