@@ -2,12 +2,16 @@
 function animauto1(x) {
     x.classList.add("pohybauto1");
 	x.classList.remove("stopauto1");
+	var auto2 = document.getElementById("auto2").classList.add("pohybauto2");
+	var auto2 = document.getElementById("auto2").classList.remove("stopauto2");
 	
 }
 
 function animauto2(x) {
     x.classList.add("pohybauto2");
 	x.classList.remove("stopauto2");
+	var auto2 = document.getElementById("auto1").classList.add("pohybauto1");
+	var auto2 = document.getElementById("auto1").classList.remove("stopauto1");
 	
 }
 
