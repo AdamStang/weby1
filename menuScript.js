@@ -40,3 +40,7 @@ $(document).ready(function(){
 		$(nt2).addClass("act");
 	});
 });
+
+function tlac(){
+	window.print();
+}
