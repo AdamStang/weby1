@@ -1,0 +1,58 @@
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+        <meta charset="UTF-8" / >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		<!--prve auticko bez blikania-->
+		.box {
+			position: realtive;
+			width: 250px;
+			height: 250px;
+			background: url(uticka250.png);
+		}
+		
+		<!--blikanie vlavo-->
+		.boxleft {
+			position: relative;
+			width: 250px;
+			height: 250px;
+			background: url(uticka250.png);
+			animation: animateleft 1s steps(2) infinite;
+		}
+		
+		@keyframes animateleft{
+			from {
+				background-position: 0 0;
+			}
+			to {
+				background-position: 500px 500px;
+			}
+		}
+		
+		
+		<!--blikanie vpravo-->
+		.boxright {
+			position: realtive;
+			width: 250px;
+			height: 250px;
+			background: url(uticka250.png);
+			animation: animateright 1s steps(2) infinite;
+		}
+		
+		@keyframes animateright{
+			from {
+				background-position: 0 0;
+			}
+			to {
+				background-position: 500px 0px;
+			}
+		}
+		</style>
+</head>
+    <body>
+	 <div class="box"></div><!--prve auticko bez blikania-->
+	 <div class="boxleft"></div><!--blikanie vlavo-->
+	 <div class="boxright"></div><!--blikanie vpravo-->
+    </body>
+    </html>
