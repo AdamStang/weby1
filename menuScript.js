@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$('.vysuvacieMenu').click(function(){
-		$('.divko ul').toggleClass('activeMenu');
+		$('.divko ul').toggle();
 	});
 });
 

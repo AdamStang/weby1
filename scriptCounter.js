@@ -8,7 +8,7 @@ n++;
 localStorage.setItem("on_load_counter", n);
 
 nums = n.toString().split('').map(Number);
-document.getElementById('CounterVisitor').innerHTML = '';
+document.getElementById('CounterVisitor').innerHTML = 'Pocet tvojich navstev: ';
 for (var i of nums) {
   document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
 }
