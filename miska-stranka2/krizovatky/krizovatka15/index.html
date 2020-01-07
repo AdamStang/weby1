@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<title>Zasrane Krizovatky</title>
+	</head>
+
+	<body>
+		<p id="test">test</p>	
+		<div id="kriz1">
+		<div class="stopsemafor1 semafor11" id="stopsemafor11" ></div>
+		<div class="stopsemafor1 semafor12" id="stopsemafor12" ></div>
+		<div class="stopsemafor2 semafor21" id="stopsemafor21" ></div>
+		<div class="stopsemafor2 semafor22" id="stopsemafor22" ></div>
+		<div class="stoppajac1 pajac11" id="pajac11" onclick="animpajac()"></div>
+		<div class="stoppajac1 pajac12" id="pajac12" onclick="animpajac()"></div>
+		<div class="stoppajac2 pajac21" id="pajac21" onclick="animpajac()"></div>
+		<div class="stoppajac2 pajac22" id="pajac22" onclick="animpajac()"></div>
+		<img src="kriz17.svg" alt="krizovatka">
+			<div class="stopauto2" id="auto2" onclick="animauto()">
+				<div class="auto2">
+				</div>
+			</div>
+			<div class="stopauto1" id="auto1" onclick="animauto()">
+				<div class="auto1">
+				</div>
+			</div>
+		
+		</div>
+			
+			
+		
+		<div style="text-align: center; margin: 50px auto; width 500px;">
+		<p> Križovatka ciest nerozlíšená dopravnými značkami.</p>
+		<p> červene-> modre-> zlte</p>
+		</div>
+		
+		<button onclick="demo()" id="demo">Demo</button>	
+		
+		<script type="text/javascript" src="script.js"></script> <!-- musi byt nakonci aby nacitalo js az po html-->
+			
+	</body>
+</html>

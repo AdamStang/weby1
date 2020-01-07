@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sk">
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Language" content="sk" />
+		<meta charset="UTF-8">
+		<title>Úvodná stránka - križovatky autoškola AMP</title>
+		<link rel="shortcut icon" type="image/png" href="../../img/favicon.png">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/b8309505ca.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/styleprimar.css">
+	</head>
+	<body>	
+		<header>
+		<div class="MaleMenu">
+			<img class="logo2" src="../../img/logo.png" width="50px" height="50px">
+			<i class="fas fa-bars vysuvacieMenu"></i>
+		</div>
+		<div class="divko">
+			<ul>
+				<li><a class="act" href="index.html">�vod</a></li>
+				<li><a href="krizovatky.html">Kri�ovatky</a></li>
+				<li><a href="meniny.html">Kalend�r men�n</a></li>
+			</ul>
+		</div>
+		<img class="logo" src="../../img/logo.png" width="50px" height="50px">
+		<nav>
+			<div class="menu">
+				<ul id="ulmenu">
+					<li class="menu">
+						<a href="../../index.html">Úvod</a>
+					</li>
+					<li class="menu">
+						<a href="../../krizovatky.html">Križovatky</a>
+						<ul class="dropdown">
+							<li><a href="../krizovatka1/index.html">Križovatka 1<img class="krmin" src="../../img/kriz1.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka2/index.html">Križovatka 2<img class="krmin" src="../../img/kriz2.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka3/index.html">Križovatka 3<img class="krmin" src="../../img/kriz3.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka4/index.html">Križovatka 4<img class="krmin" src="../../img/kriz4-5.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka5/index.html">Križovatka 5<img class="krmin" src="../../img/kriz4-5.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka6/index.html">Križovatka 6<img class="krmin" src="../../img/kriz6.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka7/index.html">Križovatka 7<img class="krmin" src="../../img/kriz7.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka8/index.html">Križovatka 8<img class="krmin" src="../../img/kriz8.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka9/index.html">Križovatka 9<img class="krmin" src="../../img/kriz9.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka10/index.html">Križovatka 10<img class="krmin" src="../../img/kriz10.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka11/index.html">Križovatka 11<img class="krmin" src="../../img/kriz11.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka12/index.html">Križovatka 12<img class="krmin" src="../../img/kriz12.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka13/index.html">Križovatka 13<img class="krmin" src="../../img/kriz13.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka14/index.html">Križovatka 14<img class="krmin" src="../../img/kriz14.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka15/index.html">Križovatka 15<img class="krmin" src="../../img/kriz15.svg" alt="an svg"></a></li>
+							
+						</ul>
+					</li>
+					<li class="menu">
+						<a href="../../meniny.html">Kalendár menín</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		</header>
+		<div id="body" class="body">
+		<center><h1>Križovatka 1</h1></center>
+		<div id="kriz1">
+		<img src="kriz1.svg" alt="krizovatka">
+
+			<div class="stopauto1" onclick="animauto1(this)" id="auticko1">
+				<div class="auto1" id="auto1" >
+				</div>
+			</div>
+			<div class="stopauto2" onclick="animauto2(this)" id="auticko2">
+				<div class="auto2" id="auto2" >
+				</div>
+			</div>
+			
+		</div>		
+		
+		<div id="content">
+		<button onclick="demo()" id="demo">Demo</button>
+		<button onclick="reset()" id="reset">Reset</button>
+		<button onclick="riesenie()" id="riesenie">Riešenie</button>
+		<div id="test"></div>
+		<div id="zobrazriesenie" class="nezobrazriesenie">
+		<h2>Riešenie</h2>
+		<p>Vodi� �erven�ho auta m� zna�kou udan� prednos� v jazde. Vodi� zelen�ho auta ide druh� v porad�.  </p>
+		</div>
+		</div>	
+			
+	</div>
+		<footer>
+		<i class="fas fa-print maxi" onclick="window.print()"></i>
+		<p class="copy">&#9400; 2020 Michaela Štetáková, Adam Štang, Peter Števík</p>
+		<address>Contact:<br /><a href="mailto:adamecek532@gmail.com">adamecek532@gmail.com</a><br /><a href="mailto:stetakova.michaela@gmail.com">stetakova.michaela@gmail.com</a><br /><a href="mailto:stevik.pet@gmail.com">stetakova.michaela@gmail.com</a></address>
+		<i class="fas fa-print mini" onclick="window.print()"></i>
+		</footer>
+		<script src="../../js/script.js" type="text/javascript"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

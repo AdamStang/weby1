@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sk">
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Language" content="sk" />
+		<meta charset="UTF-8">
+		<title>ÃšvodnÃ¡ strÃ¡nka - kriÅ¾ovatky autoÅ¡kola AMP</title>
+		<link rel="shortcut icon" type="image/png" href="../../img/favicon.png">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/b8309505ca.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/styleprimar.css">
+	</head>
+	<body>	
+		<header>
+		<div class="MaleMenu">
+			<img class="logo2" src="../../img/logo.png" width="50px" height="50px">
+			<i class="fas fa-bars vysuvacieMenu"></i>
+		</div>
+		<div class="divko">
+			<ul>
+				<li><a class="act" href="index.html">Úvod</a></li>
+				<li><a href="krizovatky.html">Kriovatky</a></li>
+				<li><a href="meniny.html">Kalendár menín</a></li>
+			</ul>
+		</div>
+		<img class="logo" src="../../img/logo.png" width="50px" height="50px">
+		<nav>
+			<div class="menu">
+				<ul id="ulmenu">
+					<li class="menu">
+						<a href="../../index.html">Ãšvod</a>
+					</li>
+					<li class="menu">
+						<a href="../../krizovatky.html">KriÅ¾ovatky</a>
+						<ul class="dropdown">
+							<li><a href="../krizovatka1/index.html">KriÅ¾ovatka 1<img class="krmin" src="../../img/kriz1.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka2/index.html">KriÅ¾ovatka 2<img class="krmin" src="../../img/kriz2.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka3/index.html">KriÅ¾ovatka 3<img class="krmin" src="../../img/kriz3.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka4/index.html">KriÅ¾ovatka 4<img class="krmin" src="../../img/kriz4-5.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka5/index.html">KriÅ¾ovatka 5<img class="krmin" src="../../img/kriz4-5.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka6/index.html">KriÅ¾ovatka 6<img class="krmin" src="../../img/kriz6.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka7/index.html">KriÅ¾ovatka 7<img class="krmin" src="../../img/kriz7.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka8/index.html">KriÅ¾ovatka 8<img class="krmin" src="../../img/kriz8.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka9/index.html">KriÅ¾ovatka 9<img class="krmin" src="../../img/kriz9.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka10/index.html">KriÅ¾ovatka 10<img class="krmin" src="../../img/kriz10.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka11/index.html">KriÅ¾ovatka 11<img class="krmin" src="../../img/kriz11.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka12/index.html">KriÅ¾ovatka 12<img class="krmin" src="../../img/kriz12.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka13/index.html">KriÅ¾ovatka 13<img class="krmin" src="../../img/kriz13.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka14/index.html">KriÅ¾ovatka 14<img class="krmin" src="../../img/kriz14.svg" alt="an svg"></a></li>
+							<li><a href="../krizovatka15/index.html">KriÅ¾ovatka 15<img class="krmin" src="../../img/kriz15.svg" alt="an svg"></a></li>
+							
+						</ul>
+					</li>
+					<li class="menu">
+						<a href="../../meniny.html">KalendÃ¡r menÃ­n</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		</header>
+		<div id="body" class="body">
+		<center><h1>KriÅ¾ovatka 2</h1></center>
+		
+		<div id="kriz1">
+		<img src="kriz2.svg" alt="krizovatka">
+
+			<div class="stopauto1" onclick="animauto1(this)"  id="auticko1">
+				<div class="auto1" id="auto1">
+				</div>
+			</div>
+			<div class="stopauto2" onclick="animauto2(this)"  id="auticko2">
+				<div class="auto2" id="auto2">
+				</div>
+			</div>
+			<div class="stopauto3" onclick="animauto3(this)"  id="auticko3">
+				<div class="auto3" id="auto3">
+				</div>
+			</div>
+			<div class="stopelektricka1" onclick="animelektricka1(this)"  id="elektr1">
+				<div class="elektricka1" id="elektricka1">
+				</div>
+			</div>
+		</div>
+		
+		<div id="content">
+		<button onclick="demo()" id="demo">Demo</button>
+		<button onclick="reset()" id="reset">Reset</button>
+		<button onclick="riesenie()" id="riesenie">RieÅ¡enie</button>
+		<div id="test"></div>
+		<div id="zobrazriesenie" class="nezobrazriesenie">
+		<h2>RieÅ¡enie</h2>
+		<p> Ako prvı prejde vodiè elektrièky, zároveò s vodièom èerveného auta.</p>
+		<p>Druhı v poradí prejde vodiè zeleného auta, ktorı odboèuje z hlavnej cesty.</p>
+		<p>Poslednı prejde vodiè èierneho auta, lebo prichádza z ved¾ajšej cesty a dával prednos autám na hlavnej ceste.</p>
+		</div>
+		</div>	
+		
+		</div>
+		<footer>
+		<i class="fas fa-print maxi" onclick="window.print()"></i>
+		<p class="copy">&#9400; 2020 Michaela Å tetÃ¡kovÃ¡, Adam Å tang, Peter Å tevÃ­k</p>
+		<address>Contact:<br /><a href="mailto:adamecek532@gmail.com">adamecek532@gmail.com</a><br /><a href="mailto:stetakova.michaela@gmail.com">stetakova.michaela@gmail.com</a><br /><a href="mailto:stevik.pet@gmail.com">stetakova.michaela@gmail.com</a></address>
+		<i class="fas fa-print mini" onclick="window.print()"></i>
+		</footer>
+		<script src="../../js/script.js" type="text/javascript"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,258 @@
+		#body {
+			position:relative;
+		}
+
+		.auto1 {
+
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: url(auta/auticko250_ce.png);
+			background-size: 200%;
+			animation: animateauto1blik 1s steps(2) infinite;
+
+		}
+		
+		@keyframes animateauto1blik{
+
+			from {
+				background-position: 0 0;
+			}
+
+			to {
+				background-position: 200% 0px;
+			}
+
+		}
+
+		.stopauto1 {
+			position: absolute;
+			top: 2%;
+			left: 36%;
+			transform: rotate(180deg);
+			width: 15%;
+			height: 15%;
+		}
+		
+		.pohybauto1 {
+			position:absolute;
+			width: 15%;
+			height: 15%;
+			animation: animateauto1 3s ;
+			background-position: 0 0;
+			animation-timing-function:linear;
+		}
+
+		@keyframes animateauto1
+		{
+			0% {
+			top: 2%;
+			left: 36%;
+			transform: rotate(180deg);
+			}
+			
+			10% {
+			top: 9%;
+			left: 36%;
+			transform: rotate(180deg);
+			}
+			
+			20% {
+			top: 13%;
+			left: 35%;
+			transform: rotate(200deg);
+			}
+			
+			35% {
+			top: 16%;
+			left: 31%;
+			transform: rotate(241deg);
+			}
+			
+			55% {
+			top: 18%;
+			left: 19%;
+			transform: rotate(270deg);
+			}
+			
+			100% {
+			top: 18%;
+			left: -15%;
+			transform: rotate(270deg);
+			}
+		}
+		/*druhe auto*/
+		.auto2 {
+
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: url(auta/auticko250_z.png);
+			background-size: 200%;
+			animation: animateauto2blik 1s steps(2) infinite;
+
+		}
+
+		@keyframes animateauto2blik{
+
+			from {
+				background-position: 0 0;
+			}
+
+			to {
+				background-position: 200% 201%;
+			}
+
+		}
+
+		.stopauto2 {
+			position: absolute;
+			top: 54%;
+			left: 19%;
+			transform: rotate(90deg);
+			width: 15%;
+			height: 15%;
+		}
+		
+		.pohybauto2 {
+			position:absolute;
+			width: 15%;
+			height: 15%;
+			animation: animateauto2 5s ;
+			background-position: 0 0;
+			animation-timing-function:linear;
+		}
+
+		@keyframes animateauto2
+		{
+			0% {
+			top: 54%;
+			left: 19%;
+			transform: rotate(90deg);
+			}
+			
+			18% {
+			top: 54%;
+			left: 35%;
+			transform: rotate(90deg);
+			}
+			
+			30% {
+			top: 48%;
+			left: 47%;
+			transform: rotate(45deg);
+			}
+			
+			50% {
+			top: 32%;
+			left: 50%;
+			transform: rotate(0deg);
+			}
+			
+			100% {
+			top: -15%;
+			left: 50%;
+			transform: rotate(0deg);
+			}
+			
+		}
+		
+		/*tretie auto*/
+		.auto3 {
+
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: url(auta/auticko250_c.png);
+			background-size: 200%;
+
+		}
+
+		.stopauto3 {
+			position: absolute;
+			top: 83%;
+			left: 50%;
+			transform: rotate(0deg);
+			width: 15%;
+			height: 15%;
+		}
+		
+		.pohybauto3 {
+			position:absolute;
+			width: 15%;
+			height: 15%;
+			animation: animateauto3 5s ;
+			background-position: 0 0;
+			animation-timing-function:linear;
+		}
+
+		@keyframes animateauto3
+		{
+			0% {
+			top: 83%;
+			left: 50%;
+			transform: rotate(0deg);
+			}
+			
+			100% {
+			top: -15%;
+			left: 50%;
+			transform: rotate(0deg);
+			}
+		}
+		
+		/*prva elektricka*/
+		.elektricka1 {
+
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: url(auta/elektricky250.png);
+			background-size: 200%;
+
+		}
+
+		.stopelektricka1 {
+			position: absolute;
+			top: 34.3%;
+			left: 64%;
+			transform: rotate(180deg);
+			width: 25%;
+			height: 25%;
+		}
+		
+		.pohybelektricka1 {
+			position:absolute;
+			width: 25%;
+			height: 25%;
+			animation: animelektricka1 3s ease-in ;
+			background-position: 0 0;
+			animation-timing-function:linear;
+		}
+
+		@keyframes animelektricka1
+		{
+			0% {
+			top: 34.3%;
+			left: 64%;
+			transform: rotate(180deg);
+			}
+			
+			100% {
+			top: 34.3%;
+			left: -25%;
+			transform: rotate(180deg);
+			}
+		}
+		
+		
+		.auto1:hover {
+			cursor: pointer;
+		}
+		.auto2:hover {
+			cursor: pointer;
+		}.auto3:hover {
+			cursor: pointer;
+		}.elektricka1:hover {
+			cursor: pointer;
+		}
