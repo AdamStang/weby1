@@ -1,0 +1,80 @@
+
+body {
+  font-family: 'lato', sans-serif;
+}
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  
+  small {
+    font-size: 0.5em;
+  }
+}
+
+
+  li {
+    border-radius: 3px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+	border: 1px solid #b3b3b3;
+  }
+  .table-header {
+    background-color: #008cba;
+    font-size: 16px;
+	color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 6px 0px #008cba;
+  }
+  .table-row .col-2{
+   margin-left: 17%;
+  }
+  .table-row .col-3{
+   margin-left: 6%;
+  }
+  .table-row .col-4{
+   margin-left: 10%;
+  }
+ 
+  
+  .col-1 {
+    flex-basis: 15%;
+  }
+  .col-2 {
+    flex-basis: 25%;
+  }
+  .col-3 {
+    flex-basis: 20%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  
+ p.check-mark{
+    color: #00b478;
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    display: inline;
+ }	
+ p.check-mark2{
+    color: black;
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    display: inline;
+ }	
