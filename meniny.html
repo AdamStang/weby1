@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>Meniny</title>
+</head>
+
+<body>
+<button type="button" onclick="loadXMLDoc2()">
+Zisti datum menin zadaneho mena</button>
+
+<button type="button" onclick="loadXMLDoc()">
+Zisti meniny podla zadaneho datumu</button>
+<br>
+<input type="name" name="name" id="name" placeholder="Meno"> <!-- Zadanie mena -->
+
+<input type="name" name="datum" id="datum" placeholder="Datum"> <!-- Zadanie datumu -->
+
+<p id="demo"></p>  <!-- Vypis -->
+
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      getN(this);
+    }
+  };
+  xmlhttp.open("GET", "meniny.xml", true);
+  xmlhttp.send();
+}
+
+function loadXMLDoc2() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      getD(this);
+    }
+  };
+  xmlhttp.open("GET", "meniny.xml", true);
+  xmlhttp.send();
+}
+
+
+
+function getN(xml) {
+
+  var x, y, i, xmlDoc, txt;
+  xmlDoc = xml.responseXML;
+  txt = "";
+  x = xmlDoc.getElementsByTagName("den");
+  y = xmlDoc.getElementsByTagName("SKd");
+  x2 = xmlDoc.getElementsByTagName("zaznam");
+
+  var u = datum.value;
+  u = u.split(".");
+  
+  var testovanie = true;
+ 
+ if(u[0]<1 || u[1]<1){
+	testovanie = false;
+ }
+ 
+ if(u[0] < 10){
+	if(u[0].includes("0") == false){
+		u[0] = "0" + u[0];
+	}
+ }
+  if(u[1] < 10){
+	if(u[1].includes("0") == false){
+		u[1] = "0" + u[1];
+	}
+ }
+ 
+ var firstTwo = u[0];  
+ var secondTwo = u[1];  
+ 
+ var together = secondTwo + firstTwo;
+ var skd = 0; // prechadza SKd
+ 
+ if(testovanie == true){
+ 
+	  for (i = 1; i< x.length; i++) {
+		if(x[i].childNodes[0].nodeValue == together){
+		 txt += y[skd].childNodes[0].nodeValue + "<br>";
+		}
+		skd += 1;
+	  }
+	  
+	  if(txt==""){
+		document.getElementById("demo").innerHTML = "Zadali ste neplatný dátum";
+	  }else{
+	  document.getElementById("demo").innerHTML = "Meniny má: " + txt;
+	}
+	}else{
+		 document.getElementById("demo").innerHTML = "Zadali ste neplatný dátum";
+	}
+}
+
+var dia = "áäčďéíľĺňóôŕšťúýÁČĎÉÍĽĹŇÓŠŤÚÝŽ";   // pismena s diakritikou
+var nodia = "aacdeillnoorstuyACDEILLNOSTUYZ";  // pismena bez diakritiky
+function diaConvert(text) {
+   var convertText = "";
+   for(i=0; i<text.length; i++) {
+      if(dia.indexOf(text.charAt(i))!=-1) {
+         convertText += nodia.charAt(dia.indexOf(text.charAt(i)));
+      }
+      else {
+         convertText += text.charAt(i);
+      }
+   }
+   return convertText;
+}
+
+
+function getD(xml) {
+	var x,x2,x3,x4,x5, dat,zaz,convert,convert1, i, xmlDoc, txt;
+	xmlDoc = xml.responseXML;
+	txt = "";
+	x = xmlDoc.getElementsByTagName("SKd");
+	dat = xmlDoc.getElementsByTagName("den");
+	zaz = xmlDoc.getElementsByTagName("zaznam");
+	  
+	var y = document.getElementById('name').value;
+	y = y.toLowerCase();  // zmena zadaneho mena na male pismena  /// PeTEr -> peter
+	var yy = y.charAt(0).toUpperCase() + y.slice(1) // zmena prveho pismena v zadanom mene na velke pismeno  /// peter -> Peter
+	var pocitadlo = 0;  // pocitadlo pre SKd, pretoze je az v 2. zazname, nesedelo by to z dlzkou x.length
+	  
+	var d = new Date();
+	d = d.getFullYear();
+
+yy = diaConvert(yy);
+
+ for (i = 1; i< x.length+1; i++) { 
+		convert = diaConvert(x[pocitadlo].childNodes[0].nodeValue);  // odstranenie diakritiky z xml   // Dávid -> David
+		convert1 = convert.split(", ");  //rozdeli convertovany string vsetkych mien v SKd na jednotlive mena
+		
+		for(j = 0; j< convert1.length ; j++) {  // prehladavanie mien v jednom SKd
+		var convert2 = convert1[j].replace(",","");
+			if(yy == convert2 ){  // ak sa dane meno z SKd rovna zadanemu menu
+			   var res = dat[i].childNodes[0].nodeValue.substring(0, 2); // bere datum z res a to prve dva znaky
+				var res2 = dat[i].childNodes[0].nodeValue.substring(2, 4);// bere datum z res a to druhe dva znaky
+				txt += res2 + ".";
+				txt += res + ".";
+			}
+		}
+		pocitadlo += 1;  //zvysenie pocitadla pre SKd
+	 }
+	 if(txt != ""){  // skontroluje ci sa naslo meno a vlozilo do premennej txt
+		
+		document.getElementById("demo").innerHTML = "Dátum menín je: " + txt + d;
+	 }else{
+		txt = "Zadali ste neplatné meno !";
+		document.getElementById("demo").innerHTML = txt;
+	 }   
+}
+
+
+</script>
+
+</body>
+</html>
