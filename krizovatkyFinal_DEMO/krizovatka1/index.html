@@ -15,25 +15,26 @@
 		<div id="kriz1">
 		<img src="kriz1.svg" alt="krizovatka">
 
-			<div class="stopauto1" onclick="animauto1(this);GFG_click(this.id)">
+			<div class="stopauto1" onclick="animauto1(this)" id="auticko1">
 				<div class="auto1" id="auto1" >
 				</div>
 			</div>
-			<div class="stopauto2" onclick="animauto2(this);GFG_click(this.id)">
+			<div class="stopauto2" onclick="animauto2(this)" id="auticko2">
 				<div class="auto2" id="auto2" >
 				</div>
 			</div>
 		</div>
 		<div style="text-align: center; margin: 50px auto; width 500px;">
-		<button id="sr" onclick="removeAll()">Spravne Riesenie</button>
-		<p id="test"></p>
-		<div class="schovane"><p>Vodiš vchádzajúci do kruhového objazdu má prednosť v jazde, ak dopravnou značkou nie je ustanovené inak. </p></div>
-		<a href="../../Krizovatky.html"><button>Späť</button></a>
+		<p>Vodiš vchádzajúci do kruhového objazdu má prednosť v jazde, ak dopravnou značkou nie je ustanovené inak. </p>
 		</div>
 		
-			
+		<p id="test">test</p>	
 		
 		<script type="text/javascript" src="script.js"></script> <!-- musi byt nakonci aby nacitalo js az po html-->
 		
+		<button onclick="demo()" id="demo">Demo</button>
+		<button onclick="vymaz()" id="vymaz">Znova</button>
+		
+			
 	</body>
 </html>

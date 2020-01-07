@@ -1,11 +1,11 @@
 
-
 function animauto1(x) {
 	var auto2 = document.getElementById("auto1").classList.add("autoblik1");
     x.classList.add("pohybauto1");
 	x.classList.remove("stopauto1");
 	
 }
+
 
 function animauto2(x) {
 	var auto2 = document.getElementById("auto2").classList.add("autoblik2");
@@ -54,15 +54,9 @@ function animelektricka2(x) {
 			i++;
 			if(i == 2){  // ak boli kliknute obe auta
 				if (JSON.stringify(poradie) === JSON.stringify(spravne_poradie)) {
-				var testik = document.getElementById("test");
-				testik.style.color = "green";
-				document.body.style.backgroundColor = "#4dff4d";
-				testik.innerHTML = "Spravne";
+				document.getElementById("test").innerHTML = "Spravne";
 				}else{
-					var testik = document.getElementById("test");
-					testik.style.color = "red";
-					document.body.style.backgroundColor = "#ff4d4d";
-					testik.innerHTML = "Nespravne";
+					document.getElementById("test").innerHTML = "Nespravne";
 				}
 				i=0;  //nastavenie i znova na 0
 			}
@@ -74,15 +68,9 @@ function animelektricka2(x) {
 			i++;
 			if(i == 2){  // ak boli kliknute obe auta
 				if (JSON.stringify(poradie) === JSON.stringify(spravne_poradie)) {
-					var testik = document.getElementById("test");
-					testik.style.color = "green";
-					document.body.style.backgroundColor = "#4dff4d";
-					testik.innerHTML = "Spravne";
+				document.getElementById("test").innerHTML = "Spravne";
 				}else{
-					var testik = document.getElementById("test");
-					testik.style.color = "red";
-					document.body.style.backgroundColor = "#ff4d4d";
-					testik.innerHTML = "Nespravne";
+					document.getElementById("test").innerHTML = "Nespravne";
 				}
 				i = 0;   //nastavenie i znova na 0
 			}
@@ -95,3 +83,32 @@ function animelektricka2(x) {
 		element2.addEventListener('click', clickHandler1); // event listener pre 2. auto
 		
 	
+	
+	
+	
+	
+	//DEMOOOOOOOO
+	
+	function sleep(ms) {
+		  return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		
+		function demo() {
+			var a = document.getElementById("auticko1");
+			var b = document.getElementById("auticko2");
+			a.classList.add("stopauto1");
+			a.classList.remove("pohybauto1");
+			b.classList.add("stopauto2");
+			b.classList.remove("pohybauto2");
+			animauto1(a);
+			sleep(1400).then(() => { 	animauto2(b); });
+		
+		}	
+		function vymaz(){
+			var a = document.getElementById("auticko1");
+			a.classList.add("stopauto1");
+			a.classList.remove("pohybauto1");
+			var b = document.getElementById("auticko2");
+			b.classList.add("stopauto2");
+			b.classList.remove("pohybauto2");
+		}

@@ -1,5 +1,4 @@
 
-
 function animauto1(x) {
 	var auto2 = document.getElementById("auto1").classList.add("autoblik1");
     x.classList.add("pohybauto1");
@@ -44,8 +43,7 @@ function animelektricka2(x) {
 	
 }
 
-	
-		var spravne_poradie = ["auto1","auto2"];  // pole so spravnym poradim
+var spravne_poradie = ["auto2","auto1"];  // pole so spravnym poradim
 		var poradie = []; // pole kde sa bude zapisovat poradie kliknutych aut
 		var i = 0;   // pomocna premenna i
 				
@@ -54,44 +52,47 @@ function animelektricka2(x) {
 			i++;
 			if(i == 2){  // ak boli kliknute obe auta
 				if (JSON.stringify(poradie) === JSON.stringify(spravne_poradie)) {
-				var testik = document.getElementById("test");
-				testik.style.color = "green";
-				document.body.style.backgroundColor = "#4dff4d";
-				testik.innerHTML = "Spravne";
+				document.getElementById("test").innerHTML = "Spravne";
 				}else{
-					var testik = document.getElementById("test");
-					testik.style.color = "red";
-					document.body.style.backgroundColor = "#ff4d4d";
-					testik.innerHTML = "Nespravne";
+					document.getElementById("test").innerHTML = "Nespravne";
 				}
 				i=0;  //nastavenie i znova na 0
 			}
 		}
 		
-		function clickHandler1(){ // declare a function that updates the state
-			//elementIsClicked = true;
+		function clickHandler2(){ // declare a function that updates the state
 			poradie[i] = "auto2";
 			i++;
 			if(i == 2){  // ak boli kliknute obe auta
 				if (JSON.stringify(poradie) === JSON.stringify(spravne_poradie)) {
-					var testik = document.getElementById("test");
-					testik.style.color = "green";
-					document.body.style.backgroundColor = "#4dff4d";
-					testik.innerHTML = "Spravne";
+				document.getElementById("test").innerHTML = "Spravne";
 				}else{
-					var testik = document.getElementById("test");
-					testik.style.color = "red";
-					document.body.style.backgroundColor = "#ff4d4d";
-					testik.innerHTML = "Nespravne";
+					document.getElementById("test").innerHTML = "Nespravne";
 				}
 				i = 0;   //nastavenie i znova na 0
 			}
 		}
 		
+		
 		var element1 = document.getElementById('auto1'); // grab a reference to your element
 		element1.addEventListener('click', clickHandler); // event listener pre 1. auto
 		
 		var element2 = document.getElementById('auto2'); // grab a reference to your element
-		element2.addEventListener('click', clickHandler1); // event listener pre 2. auto
+		element2.addEventListener('click', clickHandler2); // event listener pre 2. auto
+			
 		
+		
+//DEMOOOOOOOOOOOOOOO
+
+function sleep(ms) {
+		  return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		
+		function demo() {
+			var a = document.getElementById("auticko1");
+			var b = document.getElementById("auticko2");
+
+			animauto2(b);
+			sleep(1850).then(() => { 	animauto1(a); });
+		}	
 	

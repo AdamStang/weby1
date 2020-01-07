@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<title>Zasrane Krizovatky</title>
+	</head>
+
+	<body>
+		<p id="test">test</p>	
+		<div id="kriz1">
+		<img src="kriz8.svg" alt="krizovatka">
+
+			<div class="stopauto1" id="auto1" onclick="animauto1(this)">
+				<div class="auto1" id="auto11">
+				</div>
+			</div>
+			<div class="stopauto2" id="auto2" onclick="animauto2(this)">
+				<div class="auto2" id="auto22">
+				</div>
+			</div>
+			<div class="stopelektricka1" onclick="animelektricka1(this)" id="elektr1">
+				<div class="elektricka1" id="elektricka1">
+				</div>
+			</div>
+			<div class="stopelektricka2" onclick="animelektricka2(this)" id="elektr2">
+				<div class="elektricka2" id="elektricka2">
+				</div>
+			</div>
+		</div>
+		<div style="text-align: center; margin: 50px auto; width 500px;">
+		<p> Naše vozidlo musí dať na príkaz dopravnej značky prednosť v jazde električkám.</p>
+		<p>Ako prvé prejdú cez križovatku obidve električky súčasne.</p>
+		<p>Ako druhé prejde cez križovatku naše vozidlo súčasne s modrým, pretože obidve museli dať prednosť v jazde električkám na príkaz dopravnej značky.</p>
+		</div>
+		
+		<button onclick="demo()" id="demo">Demo</button>
+		
+		<script type="text/javascript" src="script.js"></script> <!-- musi byt nakonci aby nacitalo js az po html-->
+				
+	</body>
+</html>

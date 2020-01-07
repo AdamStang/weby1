@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<title>Zasrane Krizovatky</title>
+	</head>
+
+	<body>
+		<p id="test">test</p>	
+		<div id="kriz1">
+		<img src="kriz15.svg" alt="krizovatka">
+
+			<div class="stopauto1" onclick="animauto1(this)" id="auticko1">
+				<div class="auto1" id="auto1">
+				</div>
+			</div>
+			<div class="stopauto2" onclick="animauto2(this)" id="auticko2">
+				<div class="auto2" id="auto2">
+				</div>
+			</div>
+			<div class="stopauto3" onclick="animauto3(this)" id="auticko3">
+				<div class="auto3" id="auto3">
+				</div>
+			</div>
+		</div>
+		<div style="text-align: center; margin: 50px auto; width 500px;">
+		<p> Križovatka ciest nerozlíšená dopravnými značkami.</p>
+		<p> červene-> modre-> zlte</p>
+		</div>
+		
+		<button onclick="demo()" id="demo">Demo</button>
+		
+		<script type="text/javascript" src="script.js"></script> <!-- musi byt nakonci aby nacitalo js az po html-->
+	
+	</body>
+</html>
